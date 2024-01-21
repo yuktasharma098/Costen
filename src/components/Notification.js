@@ -65,6 +65,7 @@ function Notification() {
         }
         getNotification(employeeId).then((res) => {
             if (res.responseCode === 200) {
+                console.log(res.data)
                 const formattedData = res.data.map((data) => ({
                     ...data,
                     created_date: formatDate(data.created_date),
@@ -75,7 +76,7 @@ function Notification() {
             }
         });
     }, [apicall]);
-    console.log(data)
+    // console.log(data)
     const handleCheckboxChange = (key) => {
         const updatedSelectedKeys = selectedKeys.includes(key)
             ? selectedKeys.filter((selectedKey) => selectedKey !== key)
