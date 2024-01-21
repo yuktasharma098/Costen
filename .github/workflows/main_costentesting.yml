@@ -23,7 +23,7 @@ jobs:
 
       - name: npm install, build
           npm install
-          npm run build --ignore-warnings
+          npm run build
           
       #Zip the build for deployment
       - name: Zip Release
