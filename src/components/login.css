@@ -1,0 +1,42 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap as needed */
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  /* Card Styles */
+  .card {
+    max-width: 300px; /* Set the maximum width of the card */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+ 
+  
+  .dot-container {
+    display: flex;
+    position: absolute;
+    bottom: 3rem; 
+    right: 45%;
+
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: white;
+    border-radius: 16px;
+  height: 10px;
+    width: 30px;
+  }
+  
+ 
