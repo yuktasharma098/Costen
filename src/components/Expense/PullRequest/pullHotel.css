@@ -1,0 +1,30 @@
+/* CustomSelect.css */
+
+/* Style the outer container of the dropdown */
+.ant-select-dropdown {
+    border-radius: 8px !important; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  /* Style the scrollbar track */
+  .ant-select-dropdown .ant-select-dropdown-menu {
+    overflow-y: auto !important;
+    scrollbar-width: thin !important; /* Firefox */
+    scrollbar-color: #f5f5f5 #e8e8e8 !important; /* Firefox */
+  }
+  
+  /* Style the scrollbar thumb */
+  .ant-select-dropdown .ant-select-dropdown-menu::-webkit-scrollbar {
+    width: 8px !important; /* Safari and Chrome */
+  }
+  
+  .ant-select-dropdown .ant-select-dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #e8e8e8 !important; /* Scrollbar thumb color */
+    border-radius: 4px !important;
+  }
+  
+  /* Change scrollbar thumb color on hover (optional) */
+  .ant-select-dropdown .ant-select-dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc !important; /* Scrollbar thumb color on hover */
+  }
+  

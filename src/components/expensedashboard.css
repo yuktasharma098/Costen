@@ -1,0 +1,143 @@
+/* .dashcard-expense {
+ 
+padding-top: 1%;
+padding-left: 1%;
+    margin: 16px;
+    border-radius: 14px;
+    box-shadow: 0px 2px 4px 0px rgba(83, 78, 204, 0.05);
+  height: 20vh;
+  width: 21%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 5%;
+  }
+  
+  @media (max-width: 768px) {
+    .dashcard-expense {
+      width: 100%;
+    }
+  }
+  .dashcard-container-expense {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .dashcard-m-expense {
+ 
+    padding-top: 1%;
+    padding-left: 0.5rem;
+      margin-right: 1rem;
+      margin-top: 0.3rem;
+        border-radius: 14px;
+        box-shadow: 0px 2px 4px 0px rgba(83, 78, 204, 0.05);
+      height: 15vh;
+      width: 20%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        gap: 5%;
+      }
+      
+      @media (max-width: 768px) {
+        .dashcard-m-expense {
+          width: 100%;
+        }
+      }
+      .dashcard-container-m-expense {
+        display: flex;
+        flex-wrap: wrap;
+    
+      } */
+ /* Adjust styles as needed */
+
+/* Adjust styles as needed */
+/* Adjust styles as needed */
+
+.cardd-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 900px;
+  margin-top: 1rem;
+}
+
+.cardd {
+  position: relative;
+  width: calc(25% - 20px); /* 25% width with 20px gap */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  /* overflow: hidden; */
+}
+
+.svg-container {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+}
+
+.cardd-svg {
+  width: 30px; /* Adjust the size of the SVG as needed */
+}
+.card-title {
+  border-bottom: 1px solid #ccc; /* Add a line below the title */
+  padding-bottom: 0px; /* Adjust spacing as needed */
+  margin-bottom: 0px; /* Adjust spacing as needed */
+}
+
+.cardd-content {
+  padding: 20px;
+}
+
+/* Additional styling for your card content */
+/* Adjust styles as needed */
+
+.container-with-shadow {
+  max-width: 850px;
+  padding: 20px;
+  background-color:#FAFAFC;
+  box-shadow: 0px 2px 4px 0px rgba(83, 78, 204, 0.05);
+  border-radius: 14px;
+  margin-top:1%;
+  overflow:auto;
+}
+
+.carddd-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.carddd {
+  width: 20%; /* Adjust the width as needed, leaving some space for the button */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  height: 22vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.plus-button {
+
+  font-size: 24px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: white;
+  color: grey;
+  border: 0.3px solid grey;
+  border-radius: 24%;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.carddd-text {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* Additional styling for your cards */

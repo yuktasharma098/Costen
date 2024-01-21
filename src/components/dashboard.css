@@ -1,0 +1,64 @@
+.notes{
+    box-shadow: 0px 2px 4px 0px rgba(83, 78, 204, 0.05) ;
+    display:flex;
+    width:70%;
+    border-radius:14px;
+    background-color:#FAFAFC;
+    height: 20vh;
+    margin-top:1%;
+    overflow:auto;
+
+}
+.dashcard {
+ 
+padding-top: 1%;
+padding-left: 1%;
+    margin: 16px;
+    border-radius: 14px;
+    box-shadow: 0px 2px 4px 0px rgba(83, 78, 204, 0.05);
+  height: 27vh;
+  width: 21%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 5%;
+  }
+  
+  @media (max-width: 768px) {
+    .dashcard {
+      width: 100%;
+    }
+  }
+  .dashcard-container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .dashcard-m {
+ 
+    padding-top: 1%;
+    padding-left: 0.5rem;
+      margin-right: 1rem;
+      margin-top: 0.3rem;
+        border-radius: 14px;
+        box-shadow: 0px 2px 4px 0px rgba(83, 78, 204, 0.05);
+      height: 27vh;
+      width: 20%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        gap: 5%;
+      }
+      
+      @media (max-width: 768px) {
+        .dashcard-m {
+          width: 100%;
+        }
+      }
+      .dashcard-container-m {
+        display: flex;
+        flex-wrap: wrap;
+    
+      }

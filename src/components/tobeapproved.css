@@ -1,0 +1,34 @@
+.table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-table {
+    width: 100%; /* Adjust the width as needed */
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+/* .custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+} */
+
+/* .custom-table th {
+    background-color: #f2f2f2;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+} */
+
+/* .custom-table tr:hover {
+    background-color: #e0e0e0;
+} */
+
+.custom-table tr {
+    border-bottom: 1px solid #ddd; /* Add an underline after every row */
+}

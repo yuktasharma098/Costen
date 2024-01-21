@@ -1,0 +1,135 @@
+.sidebar {
+  width: 210px;
+  height: 100vh;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 1%;
+  transition: width 0.5s ease;
+  display: inline-block;
+
+}
+
+.sidebar.collapsed {
+  width: 105px;
+}
+.toggle.collapsed{
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  color: #fff;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 17px;
+  margin-top: 30px;
+  margin-left: 90px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #fff;
+  color: #fff;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 17px;
+  margin-top: 30px;
+  margin-left: 195px;
+}
+
+.arrow {
+  transition: transform 0.5s ease;
+}
+
+.collapsed .arrow {
+  transform: rotate(180deg);
+}
+
+.menu {
+padding: 0;
+  list-style-type: none;
+  
+  margin: 0;
+  color: grey;
+}
+
+.menu li {
+  padding-left: 22%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 10%;
+  margin-left: 3%;
+  margin-right: 3%;
+display: flex;
+justify-content: first baseline;
+cursor: pointer;
+}
+.menu li:hover {
+  background-color: #FAFAFC;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;
+}
+
+
+.menu li span {
+  margin-left: 10px;
+}
+
+.menu li svg {
+  
+  width: 20px;
+  height: 20px;
+}
+.menu-collapsed {
+  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    color: grey;
+  }
+  .menu li span.clicked {
+    margin-left: 10px;
+    color: #3052D0 ;
+  }
+  
+  .menu-collapsed li {
+padding-top: 6%;
+padding-bottom: 6%;
+display: flex;
+justify-content: center;
+margin-left: 30%;
+margin-right: 25%;
+cursor: pointer;
+  }
+  .menu-collapsed li:hover {
+    background-color: #FAFAFC;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+  }
+  
+
+  
+  .menu-collapsed li svg {
+    
+    width: 20px;
+    height: 20px;
+  }
+ .menu li.clicked{
+    background-color: #FAFAFC;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 8px;
+    
+  }
+  .menu-collapsed li.clicked {
+    background-color: #FAFAFC;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+      }
+    .extra:hover{
+      background-color: white;
+      box-shadow: 0 0 10px #3052D0;
+      border-radius: 8px;
+    }
+      

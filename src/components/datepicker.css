@@ -1,0 +1,69 @@
+/* .ant-picker-dropdown.ant-picker-dropdown-range {
+    max-height: 250px;
+    overflow-y: auto; 
+  }
+   */
+   /* DatePickerStyles.css */
+/* Style the date picker input boxes */
+/* DatePickerStyles.css */
+/* Style the date picker input boxes */
+.react-datepicker__input-container input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  height: 15px;
+}
+
+/* Change the placeholder color */
+.react-datepicker__input-container input::placeholder {
+  color:#d9d9d9; /* Replace with the desired color */
+  font-weight: 100;
+}
+
+/* Style the date picker container */
+.react-datepicker {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* Style the date picker calendar */
+.react-datepicker__calendar-container {
+  position: absolute;
+  top: 40px; /* Adjust as needed to position the calendar below the input */
+  left: 0;
+  z-index: 1000;
+}
+.react-datepicker__input-container input:hover {
+  border-color: #007bff; /* Blue border color on hover */
+}
+
+/* Focus (click) state */
+.react-datepicker__input-container input:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #007bff; /* Blue border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Box shadow on focus */
+}
+.inputclass{
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  height: 15px;
+}
+.inputclass::placeholder {
+  color:#d9d9d9; /* Replace with the desired color */
+  font-weight: 100;
+}
+.inputclass:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #007bff; /* Blue border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Box shadow on focus */
+}
+.inputclass:hover {
+  border-color: #007bff; /* Blue border color on hover */
+}
