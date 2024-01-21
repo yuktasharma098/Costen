@@ -358,6 +358,7 @@ export function getNotification(id) {
 
   return new Promise((resolve, reject) => {
     new ApiCore().getEmpId(url,id).then((res) => {
+      console.log(res)
       resolve(res);
     });
   });

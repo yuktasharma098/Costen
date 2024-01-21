@@ -1,7 +1,7 @@
 
 export function handleResponse(response) {
 
-console.log(response)
+console.log(response.data)
     return response.data;
   
   //   if (response.data) {
