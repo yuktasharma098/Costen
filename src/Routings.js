@@ -11,6 +11,7 @@ import Logout from "./components/Logout";
 import RouteGuard from "./RouteGuard";
 import Loading from "./components/Loading";
 import ResetPassword from "./components/ResetPassword";
+import Notification from "./components/Notification";
 
 function Routings() {
   return (
@@ -64,6 +65,12 @@ function Routings() {
           path="/dashboard"
           element={
             <RouteGuard element={<Dashboard />} allowedUserTypes={["2"]} />
+          }
+        />
+           <Route
+          path="/notification"
+          element={
+            <RouteGuard element={<Notification/>} allowedUserTypes={["1","2"]} />
           }
         />
         <Route
