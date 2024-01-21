@@ -76,7 +76,7 @@ function Notification() {
             //     message.error(res.responseMessage);
             // }
         });
-    }, [apicall]);
+    }, []);
 
     // }, [apicall]);
     // console.log(data)
