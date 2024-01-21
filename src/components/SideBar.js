@@ -1,4 +1,4 @@
-import React, { cloneElement, useState } from "react";
+import React, {useState } from "react";
 import "./sidebar.css";
 import { useNavigate } from "react-router-dom";
 
@@ -21,11 +21,12 @@ const userType= sessionStorage.getItem('userType')
         >
           {collapsed ? (
             <img
+            alt="images"
               style={{ width: "48px", marginBottom: "1rem" }}
               src="proclozicon.png"
             />
           ) : (
-            <img style={{ width: "160px" }} src="proclozlogo.png" />
+            <img alt="images" style={{ width: "160px" }} src="proclozlogo.png" />
           )}
         </div>
         <div

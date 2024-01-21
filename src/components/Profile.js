@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Form, Input, Button, message, Row, Col } from "antd";
+import {message, Row, Col } from "antd";
 import SideBar from "./SideBar";
 import Header from "./Header";
 import "./dashboard.css";
@@ -21,20 +21,12 @@ import {
   travelHeader,
 } from "../redux/actions";
 import PersonImage from "./PersonImage";
-import { EditOutlined } from "@ant-design/icons";
 import { getprofileData } from "../services/ApiService";
 import { useDispatch } from "react-redux";
 function Profile() {
   const [collapsed, setCollapsed] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "John Doe",
-    email: "johndoe@example.com",
-  });
+
   const [objData, setObjData] = useState({});
-  const [cost, setCost] = useState(undefined);
-  const[data,setData]= useState({})
-  const [edit, setEdit] = useState(false);
-  const [personaledit, setpersonalEdit] = useState(false);
   const dispatch=useDispatch()
   
     useEffect(() => {
@@ -65,9 +57,7 @@ function Profile() {
   useEffect(() => {
     getprofileData().then((res) => {
       if (res.responseCode === 200) {
-        setData(res.data)
         const data = res.data;
-        setCost(data.cost_center);
         delete data["cost_center"];
         setObjData(data);
       }
@@ -155,6 +145,7 @@ function Profile() {
           <div>
             <div style={{ position: "relative" }}>
               <img
+              alt="profile"
                 src="changepassword.png"
                 style={{
                   width: "97%",

@@ -78,7 +78,6 @@ function ResetPassword() {
 
     const { currentPassword, newPassword, confirmNewPassword } = values;
     const hashCurrentPassword = CryptoJS.SHA256(currentPassword).toString();
-    const hashNewPassword = CryptoJS.SHA256(newPassword).toString();
     const hashConfirmPassword = CryptoJS.SHA256(confirmNewPassword).toString();
 
     if (newPassword !== confirmNewPassword) {

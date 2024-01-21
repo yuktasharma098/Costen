@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Form, Input, Button, message, Row, Col } from "antd";
 import "./dashboard.css";
 import Footer from "./Footer";
@@ -30,7 +30,6 @@ function FirstTimePasswordChange() {
     setLoader(true);
     const { currentPassword, newPassword, confirmNewPassword } = values;
     const hashCurrentPassword = CryptoJS.SHA256(currentPassword).toString();
-    const hashNewPassword = CryptoJS.SHA256(newPassword).toString();
     const hashConfirmPassword = CryptoJS.SHA256(confirmNewPassword).toString();
 
     if (newPassword !== confirmNewPassword) {
@@ -236,7 +235,7 @@ function FirstTimePasswordChange() {
             </Form>
           </Col>
           <Col span={15} style={{ display: "flex", justifyContent: "center" }}>
-            <img src="changepassword1.png" style={{ width: "50%" }} />
+            <img alt="images" src="changepassword1.png" style={{ width: "50%" }} />
           </Col>
         </Row>
       </div>

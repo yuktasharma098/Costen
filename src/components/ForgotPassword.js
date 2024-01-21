@@ -61,7 +61,7 @@ function ForgotPassword() {
   const onSubmit = () => {
     setLoader(true);
     let str = otp.join("");
-    if (str.length != 4) {
+    if (str.length !== 4) {
       setError(true);
     } else {
       setError(false);

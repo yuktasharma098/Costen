@@ -6,13 +6,15 @@ import {
   DownOutlined,
   KeyOutlined,
 } from "@ant-design/icons";
-import { Badge, Button, Dropdown, Space, message } from "antd";
+import { Badge,Dropdown, Space, message } from "antd";
 import PersonImage from "./PersonImage";
 import { useNavigate } from "react-router-dom";
 import { getNotification } from "../services/ApiService";
 function Header(props) {
-  const [travelClick, setTravelClick] = useState(props.travel);
-  const [expenseClick, setExpenseClick] = useState(props.expense);
+  // const [travelClick, setTravelClick] = useState(props.travel);
+  // const [expenseClick, setExpenseClick] = useState(props.expense);
+  const travelClick= props.travel;
+  const expenseClick= props.expense;
   const userType = sessionStorage.getItem('userType')
   const[count,setCount]=useState()
   const employeeId=sessionStorage.getItem('employeeId')
@@ -25,68 +27,26 @@ function Header(props) {
       }
     });
   },[count,props.parentState])
-//   useEffect(()=>{
-// if(Object.keys(props)>0){
-//   setExpenseClick(true)
-//   setTravelClick(false)
 
-// }
-// else{
-//   setExpenseClick(false)
-//   setTravelClick(true)
-// }
-//   },[])
 const navigate= useNavigate()
 const handleTravelClick = () => {
-  // setTravelClick(true);
-  // setExpenseClick(false);
-  if(userType=="2"){
+
+  if(userType==="2"){
     navigate('/dashboard');
 
   }
-  else if(userType=="1"){
+  else if(userType==="1"){
     navigate('/dashboard-m');
 
   }
 };
 
 const handleExpenseClick = () => {
-  // setExpenseClick(true);
-  // setTravelClick(false);
+  
   navigate('/dashboard-expense');
 };
 
-// useEffect(() => {
- 
-//   // When the value is set, navigate
-//   if (expenseClick) {
-    
-//     navigate('/dashboard-expense');
 
-//     // Set expenseClick back to false after navigation
-//     // setExpenseClick(false);
-//   }
-// }, []);
-
-  // const handleTravelClick = () => {
-  //   setTravelClick(true);
-  //   setExpenseClick(false);
-  //   navigate('/dashboard')
-  // };
-  // const handleExpenseClick = () => {
-  //   setExpenseClick(true);
-
-  //   setTravelClick(false);
-
-   
-  //   navigate('/dashboard-expense')
-  // };
-  // useEffect(() => {
-  //   // When the value is set, navigate
-  //   if (expenseClick) {
-  //     navigate('/dashboard-expense');
-  //   }
-  // }, [expenseClick]);
   const items = [
     {
       label: <span onClick={()=>navigate('/profile')}>Profile</span>,

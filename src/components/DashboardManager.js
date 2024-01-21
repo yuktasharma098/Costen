@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Input, Row, message } from "antd";
+import {Col,Row, message } from "antd";
 import SideBar from "./SideBar";
 import Header from "./Header";
 import "./dashboard.css";
@@ -21,7 +21,6 @@ import {
 } from "../redux/actions";
 import { getBulletinBoard, getDashboardNumber } from "../services/ApiService";
 import { useDispatch } from "react-redux";
-const { TextArea } = Input;
 function DashboardManager() {
   const [collapsed, setCollapsed] = useState(false);
   const [countData, setCountData] = useState();
@@ -511,7 +510,7 @@ const[bulletin,setBulletin]=useState()
                     Send
                   </Button> */}
                 </div>
-                <img style={{ width: "20vw" }} src="dashboardm.png" />
+                <img alt="images" style={{ width: "20vw" }} src="dashboardm.png" />
                 <div></div>
               </div>
             </div>

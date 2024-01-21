@@ -1,12 +1,4 @@
-/* .ant-picker-dropdown.ant-picker-dropdown-range {
-    max-height: 250px;
-    overflow-y: auto; 
-  }
-   */
-   /* DatePickerStyles.css */
-/* Style the date picker input boxes */
-/* DatePickerStyles.css */
-/* Style the date picker input boxes */
+
 .react-datepicker__input-container input {
   border: 1px solid #ccc;
   padding: 8px;
@@ -15,13 +7,10 @@
   height: 15px;
 }
 
-/* Change the placeholder color */
 .react-datepicker__input-container input::placeholder {
   color:#d9d9d9; /* Replace with the desired color */
   font-weight: 100;
 }
-
-/* Style the date picker container */
 .react-datepicker {
   font-family: Arial, sans-serif;
   background-color: #fff;
@@ -31,10 +20,9 @@
   position: relative;
 }
 
-/* Style the date picker calendar */
 .react-datepicker__calendar-container {
   position: absolute;
-  top: 40px; /* Adjust as needed to position the calendar below the input */
+  top: 40px; 
   left: 0;
   z-index: 1000;
 }

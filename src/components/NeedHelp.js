@@ -4,7 +4,6 @@ import SideBar from "./SideBar";
 import Header from "./Header";
 import "./dashboard.css";
 import Footer from "./Footer";
-import { SearchOutlined } from "@ant-design/icons";
 import { Select } from "antd";
 import "./FaqSearch.css"; // Import your custom CSS file for styling
 import { getNeedHelp, writeToUs } from "../services/ApiService";
