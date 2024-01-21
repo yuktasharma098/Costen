@@ -59,23 +59,26 @@ function Notification() {
         setActiveKey(keys);
     };
     useEffect(() => {
-        if (isFirstRun.current) {
-            isFirstRun.current = false;
-            return;
-        }
+        // if (isFirstRun.current) {
+        //     isFirstRun.current = false;
+        //     return;
+        // }
         getNotification(employeeId).then((res) => {
-            if (res.responseCode === 200) {
-                console.log(res.data)
-                const formattedData = res.data.map((data) => ({
-                    ...data,
-                    created_date: formatDate(data.created_date),
-                }));
-                setData(formattedData);
-            } else {
-                message.error(res.responseMessage);
-            }
+            console.log(res)
+            // if (res.responseCode === 200) {
+            //     console.log(res.data)
+            //     const formattedData = res.data.map((data) => ({
+            //         ...data,
+            //         created_date: formatDate(data.created_date),
+            //     }));
+            //     setData(formattedData);
+            // } else {
+            //     message.error(res.responseMessage);
+            // }
         });
     }, [apicall]);
+
+    // }, [apicall]);
     // console.log(data)
     const handleCheckboxChange = (key) => {
         const updatedSelectedKeys = selectedKeys.includes(key)
