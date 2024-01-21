@@ -75,7 +75,23 @@ function Notification() {
       }
     });
   }, []);
-  
+  useEffect(() => {
+ 
+    getNotification(employeeId).then((res) => {
+        console.log(res)
+      if (res.responseCode === 200) {
+        console.log(res.data)
+        const formattedData = res.data.map((data) => ({
+          ...data,
+          created_date: formatDate(data.created_date),
+        }));
+        console.log(formattedData)
+        setData(formattedData);
+      } else {
+        message.error(res.responseMessage);
+      }
+    });
+  }, [apicall]);
   const handleCheckboxChange = (key) => {
     const updatedSelectedKeys = selectedKeys.includes(key)
       ? selectedKeys.filter((selectedKey) => selectedKey !== key)
