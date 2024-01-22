@@ -2,13 +2,17 @@ import { Button, Col, Form, Modal, Row, Switch, message } from "antd";
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import {
+  ExpenseCancelRequest,
   cancelRequest,
+  expensepostOtherExpense,
+  getExpenseOtherExpense,
+  getOpenRequest,
   getOtherExpense,
   postOtherExpense,
-} from "../services/ApiService";
+} from "../../../services/ApiService";
 import { useNavigate } from "react-router-dom";
 
-function OtherExpense({triggerParentEffect}) {
+function PullOtherExpense() {
   const [form] = Form.useForm();
   const requestid = useSelector((state) => state.requestedid);
   const requestName = useSelector((state) => state.travelHeader.requestName);
@@ -33,7 +37,7 @@ function OtherExpense({triggerParentEffect}) {
     //   return;
     // }
     if (requestid) {
-      getOtherExpense(requestid, "travel",requestPolicy)
+      getExpenseOtherExpense(requestid)
         .then((res) => {
           if (res.responseCode === 200) {
             if (res.data) {
@@ -65,9 +69,8 @@ function OtherExpense({triggerParentEffect}) {
       internationalRoaming: value.InternaitonalRoaming ? 1 : 0,
       incidentExpense: value.IncidentExpense ? 1 : 0,
     };
-    postOtherExpense(body,requestPolicy).then((res) => {
+    expensepostOtherExpense(body).then((res) => {
       if (res.responseCode === 200) {
-        triggerParentEffect(body)
         message.success("Saved");
       } else {
         message.error(res.responseMessage);
@@ -83,25 +86,18 @@ function OtherExpense({triggerParentEffect}) {
       requestId: requestid,
     };
     if (requestid) {
-      cancelRequest(body).then((res) => {
+      ExpenseCancelRequest(body).then((res) => {
         if (res.responseCode === 200) {
           message.success("Canceled the Request Successfully");
-
-          if (userType == "1") {
-            navigate("/dashboard-m");
-          } else {
-            navigate("/dashboard");
-          }
+          navigate("/dashboard-expense")
+       
         } else {
           message.error(res.responseMessage);
         }
       });
     } else {
-      if (userType == "1") {
-        navigate("/dashboard-m");
-      } else {
-        navigate("/dashboard");
-      }
+      navigate("/dashboard-expense");
+
       message.error("Data is not Saved Yet");
     }
   };
@@ -275,4 +271,4 @@ function OtherExpense({triggerParentEffect}) {
   );
 }
 
-export default OtherExpense;
+export default PullOtherExpense;
