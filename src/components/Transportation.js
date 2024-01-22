@@ -247,10 +247,10 @@ function Transportation({triggerParentEffect}) {
     console.log("changes");
   }, [transportationMode]);
   useEffect(() => {
-    if (isFirstRun.current) {
-      isFirstRun.current = false;
-      return;
-    }
+    // if (isFirstRun.current) {
+    //   isFirstRun.current = false;
+    //   return;
+    // }
     if(requestid){
       getTransport(requestid,"travel",requestPolicy).then((res) => {
         if (res.responseCode === 200) {
