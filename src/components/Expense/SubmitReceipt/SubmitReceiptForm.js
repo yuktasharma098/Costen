@@ -95,11 +95,11 @@ const[receiptUploaded,setReceiptUploaded]= useState(false)
       costCenter:sessionStorage.getItem("costCenter")
     });
   }, []);
-  useEffect(() => {
-    // if (isFirstRun.current) {
-    //   isFirstRun.current = false;
-    //   return;
-    // }
+  useEffect(()=>{
+       if (isFirstRun.current) {
+      isFirstRun.current = false;
+      return;
+    }
     Modal.info({
       content: (
         <span style={{ fontWeight: "600" }}>
@@ -110,6 +110,9 @@ const[receiptUploaded,setReceiptUploaded]= useState(false)
       ),
       centered: true,
     });
+  },[])
+  useEffect(() => {
+ 
     if (id) {
   
       submitReceiptGet(id).then((res) => {
@@ -484,7 +487,7 @@ const[receiptUploaded,setReceiptUploaded]= useState(false)
                                 key="cooperateCard"
                                 value="cooperateCard"
                               >
-                                Cooperate Card
+                                Corporate Card
                               </Select.Option>
                            
                             </Select>

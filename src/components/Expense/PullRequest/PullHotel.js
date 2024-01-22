@@ -874,7 +874,7 @@ function PullHotel({ triggerParentEffect }) {
                               key="cooperateCard"
                               value="cooperateCard"
                             >
-                              Cooperate Card
+                              Corporate Card
                             </Select.Option>
                             <Select.Option
                               key="personalExpense"

@@ -696,7 +696,7 @@ function PullCarRental({ triggerParentEffect }) {
                   Cash
                 </Select.Option>
                 <Select.Option key="cooperateCard" value="cooperateCard">
-                  Cooperate Card
+                Corporate Card
                 </Select.Option>
                 <Select.Option key="personalExpense" value="personalExpense">
                   Personal Expense

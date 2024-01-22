@@ -1539,7 +1539,7 @@ function PullBus({TripType,triggerParentEffect}) {
                           key="cooperateCard"
                           value="cooperateCard"
                         >
-                          Cooperate Card
+                          Corporate Card
                         </Select.Option>
                         <Select.Option
                           key="personalExpense"
@@ -2015,7 +2015,7 @@ function PullBus({TripType,triggerParentEffect}) {
                       Cash
                     </Select.Option>
                     <Select.Option key="cooperateCard" value="cooperateCard">
-                      Cooperate Card
+                    Corporate Card
                     </Select.Option>
                     <Select.Option
                       key="personalExpense"
@@ -2397,7 +2397,7 @@ function PullBus({TripType,triggerParentEffect}) {
                           key="cooperateCard"
                           value="cooperateCard"
                         >
-                          Cooperate Card
+                          Corporate Card
                         </Select.Option>
                         <Select.Option
                           key="personalExpense"
@@ -2771,7 +2771,7 @@ function PullBus({TripType,triggerParentEffect}) {
                           key="cooperateCard"
                           value="cooperateCard"
                         >
-                          Cooperate Card
+                          Corporate Card
                         </Select.Option>
                         <Select.Option
                           key="personalExpense"

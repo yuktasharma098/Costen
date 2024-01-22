@@ -6,11 +6,10 @@ import "../../dashboard.css";
 import Footer from "../../Footer";
 import "../../tobeapproved.css";
 import { useNavigate } from "react-router-dom";
-import { allTravelRequestDashboard, pull, pullRequestList } from "../../../services/ApiService";
+import { pull, pullRequestList } from "../../../services/ApiService";
 import moment from "moment";
 import { requesteid } from "../../../redux/actions";
 import { useDispatch } from "react-redux";
-import { faL } from "@fortawesome/free-solid-svg-icons";
 const formatColumnName = (columnName) => {
   const words = columnName.split("_");
   const formattedWords = words.map(
