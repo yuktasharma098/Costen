@@ -96,10 +96,7 @@ const[receiptUploaded,setReceiptUploaded]= useState(false)
     });
   }, []);
   useEffect(()=>{
-       if (isFirstRun.current) {
-      isFirstRun.current = false;
-      return;
-    }
+  
     Modal.info({
       content: (
         <span style={{ fontWeight: "600" }}>
