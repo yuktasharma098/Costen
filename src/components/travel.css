@@ -1,0 +1,16 @@
+/* Custom CSS for the selected menu item with increased specificity */
+.ant-menu-item.ant-menu-item-selected {
+  background-color: #E63472 !important; /* Change background color when selected */
+  color: #FFFFFF !important; /* Change text color when selected */
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.ant-menu-item.ant-menu-item-only-child{
+  color: #7B809A;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

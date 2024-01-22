@@ -12,81 +12,131 @@ import RouteGuard from "./RouteGuard";
 import Loading from "./components/Loading";
 import ResetPassword from "./components/ResetPassword";
 import Notification from "./components/Notification";
+import TotalRequest from "./components/TotalRequest";
+import OpenRequest from "./components/OpenRequest";
+import PendingRequest from "./components/PendingRequest";
+import ToBeApproved from "./components/ToBeApproved";
+import Details from "./components/Details";
+import AddRequest from "./components/AddRequest";
+import TravelPage from "./components/TravelPage";
 
 function Routings() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Navigate to="/login" replace />} />
-     
-       
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/" element={<Navigate to="/login" replace />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route
+                    path="/needhelp"
+                    element={
+                        <RouteGuard element={<NeedHelp />} allowedUserTypes={["1", "2"]} />
+                    }
+                />
+                <Route
+                    path="/profile"
+                    element={
+                        <RouteGuard element={<Profile />} allowedUserTypes={["1", "2"]} />
+                    }
+                />
+                <Route path="/password-change" element={<FirstTimePasswordChange />} />
+                <Route
+                    path="/load"
+                    element={
+                        <RouteGuard element={<Loading />} allowedUserTypes={["1", "2"]} />
+                    }
+                />
 
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-       
+                <Route
+                    path="/changepassword"
+                    element={
+                        <RouteGuard element={<ResetPassword />} allowedUserTypes={["1", "2"]} />
+                    }
+                />
+                <Route
+                    path="/dashboard"
+                    element={
+                        <RouteGuard element={<Dashboard />} allowedUserTypes={["2"]} />
+                    }
+                />
+                <Route
+                    path="/notification"
+                    element={
+                        <RouteGuard element={<Notification />} allowedUserTypes={["1", "2"]} />
+                    }
+                />
+                <Route
+                    path="/dashboard-m"
+                    element={
+                        <RouteGuard
+                            element={<DashboardManager />}
+                            allowedUserTypes={["1"]}
+                        />
+                    }
+                />
+                <Route
+                    path="/total-request"
+                    element={
+                        <RouteGuard
+                            element={<TotalRequest />}
+                            allowedUserTypes={["1", "2"]}
+                        />
+                    }
+                />
+                <Route
+                    path="/open-request"
+                    element={
+                        <RouteGuard
+                            element={<OpenRequest />}
+                            allowedUserTypes={["1", "2"]}
+                        />
+                    }
+                />
+                <Route
+                    path="/pending-request"
+                    element={
+                        <RouteGuard
+                            element={<PendingRequest />}
+                            allowedUserTypes={["1", "2"]}
+                        />
+                    }
+                />
+                <Route
+                    path="/tobeapprove"
+                    element={
+                        <RouteGuard element={<ToBeApproved />} allowedUserTypes={["1"]} />
+                    }
+                />
+                <Route
+                    path="/detail"
+                    element={
+                        <RouteGuard element={<Details />} allowedUserTypes={["1"]} />
+                    }
+                />
+                <Route
+                    path="/add-request"
+                    element={
+                        <RouteGuard
+                            element={<AddRequest />}
+                            allowedUserTypes={["1", "2"]}
+                        />
+                    }
+                />
 
-        
-       
-       
-        <Route
-          path="/needhelp"
-          element={
-            <RouteGuard element={<NeedHelp />} allowedUserTypes={["1", "2"]} />
-          }
-        />
-        
-  
-        <Route
-          path="/profile"
-          element={
-            <RouteGuard element={<Profile />} allowedUserTypes={["1", "2"]} />
-          }
-        />
-    
-     
-    
-       
-        <Route path="/password-change" element={<FirstTimePasswordChange />} />
-       
-        <Route
-          path="/load"
-          element={
-            <RouteGuard element={<Loading />} allowedUserTypes={["1", "2"]} />
-          }
-        />
-      
-      <Route
-          path="/changepassword"
-          element={
-            <RouteGuard element={<ResetPassword />} allowedUserTypes={["1", "2"]} />
-          }
-        />
-        <Route
-          path="/dashboard"
-          element={
-            <RouteGuard element={<Dashboard />} allowedUserTypes={["2"]} />
-          }
-        />
-           <Route
-          path="/notification"
-          element={
-            <RouteGuard element={<Notification/>} allowedUserTypes={["1","2"]} />
-          }
-        />
-        <Route
-          path="/dashboard-m"
-          element={
-            <RouteGuard
-              element={<DashboardManager />}
-              allowedUserTypes={["1"]}
-            />
-          }
-        />
-      
-        <Route path="/logout" element={<Logout />} />
-      </Routes>
-    </BrowserRouter>
-  );
+                <Route
+                    path="/travel-page"
+                    element={
+                        <RouteGuard
+                            element={<TravelPage />}
+                            allowedUserTypes={["1", "2"]}
+                        />
+                    }
+                />
+
+                <Route path="/logout" element={<Logout />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default Routings;
